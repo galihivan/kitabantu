@@ -1,4 +1,3 @@
-// src/components/testimoni/Testimoni.jsx
 import React from "react";
 import testimoniData from "../data/testimoniData";
 
@@ -7,9 +6,12 @@ const Testimoni = () => {
     <section className="w-full py-16 bg-gray-50">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold text-customBlue mb-8">Apa Kata Pengguna Kami</h2>
-        <div className="flex justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {testimoniData.map((testimoni) => (
-            <div key={testimoni.id} className="w-72 p-6 bg-white rounded-lg shadow-lg">
+            <div
+              key={testimoni.id}
+              className="w-72 p-6 bg-white rounded-lg shadow-lg"
+            >
               <img
                 src={testimoni.image}
                 alt={testimoni.name}
