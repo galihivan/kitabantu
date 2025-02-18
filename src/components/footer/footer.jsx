@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../../assets/logo1.jpg";
 import { FaChevronDown } from "react-icons/fa";
 
 const Footer = () => {
@@ -13,19 +14,19 @@ const Footer = () => {
 
   return (
     <footer className="bg-customBlue text-white py-8">
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        <div className="flex flex-col items-center md:items-start">
+      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-center">
+        {/* Logo and Introduction */}
+        <div className="flex flex-col items-center sm:items-start justify-center text-center sm:text-left">
           <div className="flex items-center gap-2 mb-4">
-            <img src="/logo.jpg" alt="Logo" className="w-24 h-24" />
-            <h1 className="text-2xl font-bold text-customBlue">Bantu</h1>
+            <img src={logo} alt="Logo" className="h-16 w-auto" />
           </div>
           <p className="text-lg font-bold mb-1">
             Menyediakan Platform Freelance untuk Membantu Indonesia Tumbuh!
           </p>
         </div>
 
-        {/* Menu Keahlian */}
-        <div className="flex flex-col mx-1">
+        {/* Keahlian Section */}
+        <div className="flex flex-col mx-1 sm:mx-0">
           <button
             className="flex justify-between items-center text-lg font-bold w-full sm:cursor-default"
             onClick={() => toggleSection("keahlian")}
@@ -37,17 +38,21 @@ const Footer = () => {
               }`}
             />
           </button>
-          <div className={`text-white gap-2 ${openSections["keahlian"] ? "block" : "hidden"} sm:block`}>
-            <p className="m-0">Pengembangan Web</p>
-            <p className="m-0">Desain Grafis</p>
-            <p className="m-0">Pemasaran Digital</p>
-            <p className="m-0">Penulisan Konten</p>
-            <p className="m-0">Fotografi</p>
+          <div
+            className={`text-white gap-2 ${
+              openSections["keahlian"] ? "block" : "hidden"
+            } sm:block`}
+          >
+            <p className="m-0 text-left">Pengembangan Web</p>
+            <p className="m-0 text-left">Desain Grafis</p>
+            <p className="m-0 text-left">Pemasaran Digital</p>
+            <p className="m-0 text-left">Penulisan Konten</p>
+            <p className="m-0 text-left">Fotografi</p>
           </div>
         </div>
 
-        {/* Menu Perusahaan */}
-        <div className="flex flex-col mx-1">
+        {/* Perusahaan Section */}
+        <div className="flex flex-col mx-1 sm:mx-0">
           <button
             className="flex justify-between items-center text-lg font-bold w-full sm:cursor-default"
             onClick={() => toggleSection("perusahaan")}
@@ -59,17 +64,21 @@ const Footer = () => {
               }`}
             />
           </button>
-          <div className={`text-white gap-2 ${openSections["perusahaan"] ? "block" : "hidden"} sm:block`}>
-            <p className="m-0">Tentang Kami</p>
-            <p className="m-0">FAQ</p>
-            <p className="m-0">Kebijakan Privasi</p>
-            <p className="m-0">Ketentuan Layanan</p>
-            <p className="m-0">Bantuan</p>
+          <div
+            className={`text-white gap-2 ${
+              openSections["perusahaan"] ? "block" : "hidden"
+            } sm:block`}
+          >
+            <p className="m-0 text-left">Tentang Kami</p>
+            <p className="m-0 text-left">FAQ</p>
+            <p className="m-0 text-left">Kebijakan Privasi</p>
+            <p className="m-0 text-left">Ketentuan Layanan</p>
+            <p className="m-0 text-left">Bantuan</p>
           </div>
         </div>
 
-        {/* Menu Komunitas */}
-        <div className="flex flex-col mx-1">
+        {/* Komunitas Section */}
+        <div className="flex flex-col mx-1 sm:mx-0">
           <button
             className="flex justify-between items-center text-lg font-bold w-full sm:cursor-default"
             onClick={() => toggleSection("komunitas")}
@@ -81,9 +90,13 @@ const Footer = () => {
               }`}
             />
           </button>
-          <div className={`text-white gap-2 ${openSections["komunitas"] ? "block" : "hidden"} sm:block`}>
-            <p className="m-0">Tips Sukses</p>
-            <p className="m-0">Blog</p>
+          <div
+            className={`text-white gap-2 ${
+              openSections["komunitas"] ? "block" : "hidden"
+            } sm:block`}
+          >
+            <p className="m-0 text-left">Tips Sukses</p>
+            <p className="m-0 text-left">Blog</p>
           </div>
         </div>
       </div>

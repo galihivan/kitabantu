@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import logo from '../../assets/logo1.jpg';
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State untuk toggle menu
@@ -24,17 +24,18 @@ const Navbar = () => {
   }, []);
 
   return (
+    <header className="w-full border-b border-gray-300 bg-white shadow-md">
     <nav
       className={`flex justify-between items-center p-4 fixed w-full top-0 left-0 z-10 transition-shadow ${
         scrolling ? 'shadow-md' : ''
       } bg-customBlue`}
     >
-      <div className="flex items-center gap-2">
-        <img src="/logo.jpg" alt="Logo" className="w-16 h-16" />
+      <div className="flex justify-between items-center h-[60px] px-4 sm:px-[120px]">
+        <img src={logo} alt="Logo" className="w-[120px] sm:w-[160px] h-auto" />
       </div>
-      
+     
       {/* Menu untuk layar besar (desktop) */}
-      <div className="hidden md:flex items-center gap-4">
+      <div className="hidden md:flex items-center gap-6">
         <a href="#" className="text-white">Bantu Pro</a>
         <a href="#" className="text-white">Explore</a>
         <a href="#" className="text-white">English</a>
@@ -58,6 +59,7 @@ const Navbar = () => {
         <button className="block mx-auto bg-white text-customBlue px-3 py-1 rounded mt-2">Join</button>
       </div>
     </nav>
+    </header>
   );
 };
 
