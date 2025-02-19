@@ -1,7 +1,7 @@
 import Navbar from "@/components/navbar/Navbar";
 import HeroSection from "@/components/herosection/HeroSection";
 import TrustedBy from "@/components/TrustedBy";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import Testimoni from "@/components/testimoni/Testimoni";
 import StepsSection from "@/components/stepsection/StepSection";
 
